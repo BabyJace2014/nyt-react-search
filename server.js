@@ -27,8 +27,7 @@ app.get("*", function(req, res) {
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect("mongodb://heroku_g7phtck6:dk8p26sffovav36pr6f32l5dfh@ds129393.mlab.com:29393/heroku_g7phtck6");
-//mongoose.connect(
+mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/nytreact",
   {
     useMongoClient: true
